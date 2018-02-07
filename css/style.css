@@ -71,7 +71,11 @@ ul li:hover {
   margin-top:10px;
 }
 
-.user img, .user a > span {
+.user img,{
+  visibility: hidden;
+}
+
+.user a > span {
   float:left;
 }
 
@@ -93,7 +97,7 @@ ul li:hover {
 }
 
 .media img {
-  display: none;
+  visibility: hidden;
   max-width:250px;
   max-height:250px;
 }
