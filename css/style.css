@@ -38,7 +38,7 @@ ul li {
 }
 
 ul li:hover {
-  background-color:#f0f3fb;
+  background-color:transparent;
 }
 
 .user, .tweet, .timePosted {
@@ -50,7 +50,7 @@ ul li:hover {
 }
 
 .tweet {
-  width:50%;
+  width:100%;
 }
 
 .timePosted {
@@ -76,12 +76,14 @@ ul li:hover {
 }
 
 .interact {
+  display: none;
   float:left;
   width:10%;
   margin-top:-7px;
 }
 
 .interact a {
+  display: none;
   margin-left:5px;
   float:left;
 }
@@ -91,6 +93,7 @@ ul li:hover {
 }
 
 .media img {
+  display: none;
   max-width:250px;
   max-height:250px;
 }
