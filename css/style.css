@@ -7,16 +7,16 @@ font-family: "Fraktur";
 src: url("fonts/GotenborgFraktur.otf")format("opentype");
 }
 
+
 body {
-  font-family: "Fraktur";
+ font-family: "Fraktur";
 }
 
 h2 {
   clear:both;
 }
 
-
- p, a{ 
+p, a {
  font-family: "Fraktur";
  font-size: 100px;
  line-height: 105px;
