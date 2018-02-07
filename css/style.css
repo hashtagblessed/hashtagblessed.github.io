@@ -1,22 +1,26 @@
-/* 
+/*
 * Example style!
 * You can do whatever the hell you want on your site :-)
 */
-
 @font-face {
 font-family: "Fraktur";
 src: url("fonts/GotenborgFraktur.otf")format("opentype");
 }
+
+body {
+  font-family: "Fraktur";
+}
+
+h2 {
+  clear:both;
+}
+
 
  p, a{ 
  font-family: "Fraktur";
  font-size: 100px;
  line-height: 105px;
  }
-
-h2 {
-  clear:both;
-}
 
 a, a:visited {
   color:#427fed;
@@ -102,4 +106,8 @@ ul li:hover {
   padding:5px;
   width:10%;
   font-family:arial;
+}
+
+.tco-hidden{
+  display: none;
 }
