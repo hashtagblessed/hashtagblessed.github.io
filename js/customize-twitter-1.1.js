@@ -177,9 +177,9 @@ twitterFetcher.fetch(config3);
 // custom format to display the date/time of the post, and does not show
 // retweets.
 var config4 = {
-  "id": '345690956013633536',
+  "id": '959916065932312576',
   "domId": 'example4',
-  "maxTweets": 3,
+  "maxTweets": 1,
   "enableLinks": true,
   "showUser": false,
   "showTime": true,
