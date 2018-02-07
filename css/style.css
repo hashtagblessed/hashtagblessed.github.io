@@ -23,17 +23,16 @@ p, a {
  }
 
 a, a:visited {
-  color:#427fed;
+  color:#000000;
 }
 
 a:hover {
-  color:#82afff;
+  color:#000000;
 }
 
 ul li {
   list-style:none;
   overflow:hidden;
-  border:1px solid #dedede;
   margin:5px;
   padding:5px;
 }
