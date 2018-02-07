@@ -1,0 +1,57 @@
+<header>
+</header>
+<body onload="paint()">
+<style>
+
+@font-face {
+font-family: "Fraktur";
+src: url("fonts/GotenborgFraktur.otf")format("opentype");
+}
+
+ p { 
+ font-family: "Fraktur";
+ font-size: 100px;
+ line-height: 105px;
+ }
+
+ 
+</style>
+
+
+
+<div style="position: absolute; left: 580px; top: 500px; z-index: 100; display;inline-block; max-width:1400px;">
+<img src="img/at_symbol.jpg" align=left  style="margin-right:40px; margin-bottom: 10px; margin-top:30;"></img>
+ <p>Dr. Hotdogs
+ @drhotdogs</p>
+ <p>19 minutes ago
+</p>
+ <p>Lorem dolor sed viverra ipsum nunc aliquet bibendum enim facilisis gravida neque convallis a cras semper auctor neque vitae tempusquam pellentesque nec nam aliquam sem et tortor consequat id porta nibh venenatis cras sed felis eget velit aliquet sagittis id consectetur #blessed
+<a class="twitter-timeline" 
+	data-dnt="true" 
+	data-chrome="noheader transparent nofooter nofooter noborders"
+  	data-tweet-limit="1"
+  	data-widget-id="959916065932312576">
+  </a>
+ <script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+"://platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");
+</script>
+<script>
+var widgetCSS = "" +
+    "body{font-family: 'Fraktur';}" +
+    ".timeline-Header{background-color: purple; border-top-left-radius: 10px; border-top-right-radius: 10px;}" +
+    ".timeline-Header-title{color: white;}" +
+    ".timeline-Tweet-text{color: red;}"	+
+    ".timeline-Tweet-img.avatar {display: none;}"	+
+    ".timeline-Tweet-media{display:none}"	+
+
+function paint(){
+  var w = document.getElementById("twitter-widget-0").contentDocument;
+  var s = document.createElement("style");
+  s.innerHTML = widgetCSS;
+  s.type = "text/css";
+  w.head.appendChild(s);
+}
+</script>
+
+</div>
+<img src="img/illuminated.jpg"></img>
+</body>
