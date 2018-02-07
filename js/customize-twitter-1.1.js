@@ -162,9 +162,9 @@ twitterFetcher.fetch(config2);
 // A simple example to get latest 5 tweets for #API tag and shows any images
 // attached to tweets.
 var config3 = {
-  "id": '959916065932312576',
+  "id": '502160051226681344',
   "domId": 'example3',
-  "maxTweets": 1,
+  "maxTweets": 5,
   "enableLinks": true,
   "showImages": true
 };
@@ -177,9 +177,9 @@ twitterFetcher.fetch(config3);
 // custom format to display the date/time of the post, and does not show
 // retweets.
 var config4 = {
-  "id": '959916065932312576',
+  "id": '345690956013633536',
   "domId": 'example4',
-  "maxTweets": 1,
+  "maxTweets": 3,
   "enableLinks": true,
   "showUser": false,
   "showTime": true,
