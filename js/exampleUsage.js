@@ -120,10 +120,14 @@ twitterFetcher.fetch(configLikes);
 // id "example1". Also automatically hyperlinks URLS and user mentions and
 // hashtags.
 var config1 = {
-  "id": '345170787868762112',
+  "id": '959916065932312576',
   "domId": 'example1',
   "maxTweets": 1,
-  "enableLinks": true
+  "enableLinks": true,
+  "showUser": false,
+  "showTime": true,
+  "dateFunction": dateFormatter,
+  "showRetweet": false
 };
 twitterFetcher.fetch(config1);
 
