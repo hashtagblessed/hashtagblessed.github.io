@@ -1,24 +1,22 @@
 {
-  "name": "twitter-fetcher",
-  "description": "Fetch your Twitter pots without using OAUTH or the new 1.1 API. All in JavaScript.",
-  "version": "17.0.3",
-  "author": {
-    "name": "Jason Mayes"
-  },
-  "repository": {
-    "type": "git",
-    "url": "https://github.com/jasonmayes/Twitter-Post-Fetcher.git"
-  },
-  "main": [
-    "js/twitterFetcher.js"
+  "name": "p5.js-pdf",
+  "main": "dist/p5.pdf.js",
+  "version": "0.3.0",
+  "homepage": "https://github.com/zenozeng/p5.js-pdf",
+  "authors": [
+    "Zeno Zeng <zenoofzeng@gmail.com>"
   ],
+  "description": "A simple PDF export module for p5.js.",
   "keywords": [
-    "Twitter",
-    "fetcher",
-    "Jason Mayes",
-    "Social",
-    "JavaScript",
-    "No OAUTH",
-    "Widget"
+    "p5",
+    "PDF"
+  ],
+  "license": "MIT",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
   ]
 }

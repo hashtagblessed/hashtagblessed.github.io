@@ -4,7 +4,10 @@
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
     <meta name="keywords" content="Twitter API Fetcher" />
     <meta name="description" content="Allows you to fetch your twitter posts without using the 1.1 API. Pure JavaScript! Learn more and get updates at: http://www.jasonmayes.com/projects/twitterApi/" />
-    <meta name="" content="" />
+    <meta name="" content=""/>
+   	<script type="text/javascript" src="js/jquery/jquery-1.7.1.min.js"></script>
+	<script type="text/javascript" src="js/jspdf.js"></script> 
+	<script type="text/javascript" src="js/jspdf.plugin.from-html.js"></script>
     <title></title>
     <link href="css/style.css" rel="stylesheet" type="text/css" />
     <style>
@@ -13,11 +16,17 @@ font-family: "Fraktur";
 src: url("fonts/GotenborgFraktur.otf")format("opentype");
 }
 </style>
+
   </head>
   <body>
-    <div id="example4" style="position: absolute; left: 580px; top: 500px; z-index: 100; display;inline-block; max-width:1400px;"><img src="img/at_symbol.jpg" align=left  style="margin-right:40px; margin-bottom: 10px; margin-top:30;"></img><p>Hello world</p></div>
-
-    <!-- moment.js only needed for Query 6 example -->
+  <div id="testcase">
+  <img src="img/illuminated.jpg"></img>
+    <div style="position: absolute; left: 580px; top: 500px; z-index: 100; display;inline-block; max-width:1400px;">
+    <div><img src="img/at_symbol.jpg" align=left  style="margin-right:40px; margin-bottom: 10px; margin-top:30;"></img></div>
+    <div id="example4" style="position: absolute; margin-top: 150px; max-width:1380px;">
+    </div>
+    </div>
+<!-- moment.js only needed for Query 6 example -->
     <script type="text/javascript" src="js/twitterFetcher_min.js"></script>
     <script>
     var config4 = {
@@ -41,7 +50,21 @@ function dateFormatter(date) {
 }
 
 twitterFetcher.fetch(config4);
-</script>
 
-  </body>
+     var time = new Date().getTime();
+     $(document.body).bind("mousemove keypress", function(e) {
+         time = new Date().getTime();
+     });
+
+     function refresh() {
+         if(new Date().getTime() - time >= 60000) 
+             window.location.reload(true);
+         else 
+             setTimeout(refresh, 10000);
+     }
+
+     setTimeout(refresh, 10000);
+
+</script>
+</body>
 </html>

@@ -32,9 +32,6 @@ a:hover {
 
 ul li {
   list-style:none;
-  overflow:hidden;
-  margin:5px;
-  padding:5px;
 }
 
 ul li:hover {
@@ -42,11 +39,13 @@ ul li:hover {
 }
 
 .user, .tweet, .timePosted {
-  float:left;
+  float:right;
 }
 
 .user {
-  width:25%;
+  padding-left: 555px;
+   font-size: 80px;
+ line-height: 85px;
 }
 
 .tweet {
@@ -56,6 +55,8 @@ ul li:hover {
 .timePosted {
   width:15%;
   font-size: 45px;
+  line-height: 50px;
+  float: left;
 }
 
 .user {
@@ -69,11 +70,11 @@ ul li:hover {
 .user span span {
   width:100px;
   display:block;
-  margin-top:10px;
+ 
 }
 
 .user img,{
-  visibility: hidden;
+ visibility: hidden;
 }
 
 .user a > span {
@@ -89,7 +90,7 @@ ul li:hover {
 
 .interact a {
   display: none;
-  margin-left:5px;
+  
   float:left;
 }
 

@@ -1,16 +1,27 @@
 {
-  "name": "twitter-fetcher",
-  "version": "17.0.3",
-  "keywords": ["Twitter", "OAUTH", "JavaScript", "tweets", "api", "widget"],
-  "description": "Fetch your twitter posts without using the new Twitter 1.1 API. Pure JavaScript!",
-  "author": "Jason Mayes",
-  "main": "js/twitterFetcher_min.js",
+  "name": "p5.pdf",
+  "version": "0.3.0",
+  "description": "A simple PDF export module for p5.js, based on p5.svg.",
+  "main": "p5.pdf.js",
+  "dependencies": {
+    "zlib-browserify": "^0.0.3"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
   "repository": {
     "type": "git",
-    "url": "https://github.com/jasonmayes/Twitter-Post-Fetcher.git"
+    "url": "https://github.com/zenozeng/p5.js-pdf.git"
   },
+  "keywords": [
+    "pdf",
+    "p5.js",
+    "svg"
+  ],
+  "author": "Zeno Zeng",
+  "license": "MIT",
   "bugs": {
-    "url": "https://github.com/jasonmayes/Twitter-Post-Fetcher/issues"
-  },
-  "homepage": "https://github.com/jasonmayes/Twitter-Post-Fetcher"
+    "url": "https://github.com/zenozeng/p5.js-pdf/issues"
+  }
 }
