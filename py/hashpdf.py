@@ -1,21 +1,38 @@
-import pdfkit
+#!/usr/bin/env python
 import os
+import pdfkit
+import time
+import subprocess
+
 
 
 options = {
     'page-size': 'Letter',
-    'margin-top': '0.75in',
-    'margin-right': '0.75in',
-    'margin-bottom': '0.75in',
-    'margin-left': '0.75in',
-    #'javascript-delay': 100,
+    'margin-top': '0in',
+    'margin-right': '0in',
+    'margin-bottom': '0in',
+    'margin-left': '0in',
   	'encoding': 'UTF-8',
+  	'zoom': 1.246,
 
 }
 
 
-pdfkit.from_file('/Users/chrisgivens/hashtagblessed.github.io/index.html', 'out.pdf', options=options)
+pdfkit.from_file('/Users/chrisgivens/hashtagblessed.github.io/index.html', 'blessed.pdf', options=options)
 
-os.startfile("YourDocument", "print")
+time.sleep(0.2)
 
-#pdfkit.from_url('https://hashtagblessed.github.io/', 'out.pdf', options=options)
+from subprocess import Popen
+with open("blessed.pdf") as f:
+  # call the system's lpr command
+  p = Popen(["lpr"], stdin=f, shell=True) 
+  output = p.communicate()[0]
+
+time.sleep(45)
+
+try:
+	while True:
+		p = Popen(['python ./hashpdf.py'], shell=True)  
+		output = p.communicate()[0]
+except KeyboardInterrupt:
+  exit

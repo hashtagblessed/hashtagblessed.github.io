@@ -1,18 +1,4 @@
-var doc = new jsPDF();
+var wkhtmltopdf = require('wkhtmltopdf');
 
-// We'll make our own renderer to skip this editor
-var specialElementHandlers = {
-	'#editor': function(element, renderer){
-		return true;
-	},
-	'.controls': function(element, renderer){
-		return true;
-	}
-};
-
-// All units are in the set measurement for the document
-// This can be changed to "pt" (points), "mm" (Default), "cm", "in"
-doc.fromHTML($('body').get(0), 15, 15, {
-	'width': 170, 
-	'elementHandlers': specialElementHandlers
-});
+wkhtmltopdf('http://google.com/', { pageSize: 'letter' })
+.pipe(fs.createWriteStream('out.pdf'));

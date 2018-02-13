@@ -3,7 +3,7 @@
   <head>
     <meta name="keywords" content="Twitter API Fetcher" />
     <meta name="" content=""/>
-    <meta http-equiv="refresh" content="60" />
+    <meta http-equiv="refresh" content="30" />
     <title></title>
 
 <style type= "text/css">
@@ -51,24 +51,28 @@ ul li:hover {
 }
 
 .user, .tweet, .timePosted {
+	overflow-wrap: break-word;
+  	word-wrap: break-word;
 
-  float:right;
 }
 
 .user {
-  padding-left: 555px;
-   font-size: 84px;
- line-height: 89px;
+  padding-left: 625px;
+  overflow-wrap: break-word;
+  word-wrap: break-word;
+  font-size: 84px;
+  line-height: 89px;
 }
 
 .tweet {
   width:100%;
-  margin-top: 100px;
+  margin-top: 285px;
+  hyphens: manual;
   overflow: hidden;
 }
 
 .timePosted {
-  width:15%;
+  width:50%;
   font-size: 45px;
   line-height: 50px;
   float: left;
@@ -99,13 +103,12 @@ ul li:hover {
 .interact {
   display: none;
   float:left;
-  width:10%;
+  width:20%;
   margin-top:-7px;
 }
 
 .interact a {
   display: none;
-  
   float:left;
 }
 
@@ -149,11 +152,11 @@ twitterFetcher.fetch(config4);
 </script>
   </head>
   <body>
-  <div id="testcase">
+  <div>
   <img src="img/illuminated.jpg"></img>
-    <div style="position: absolute; left: 580px; top: 500px; z-index: 100; display;inline-block; max-width:1400px;">
-    <div><img src="img/at_symbol.jpg" align=left  style="margin-right:40px; margin-bottom: 10px; margin-top:30;"></img></div>
-    <div id="example4" style="position: absolute; margin-top: 150px; max-width:1380px;">
+    <div style="position: absolute; left: 580px; top: 500px; z-index: 100; display;inline-block;">
+    <div><img src="img/at_symbol.jpg" align=left  style="margin-right:40px; margin-bottom: 10px; margin-top:30; width:600px;"></img></div>
+    <div id="example4" style="position: absolute; margin-top: 150px; width:1400px;">
     </div>
     </div>
 <!-- moment.js only needed for Query 6 example -->
