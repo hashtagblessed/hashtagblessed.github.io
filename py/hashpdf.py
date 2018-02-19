@@ -1,10 +1,19 @@
 #!/usr/bin/env python
 import os
 import pdfkit
+import threading
 import time
+import datetime
+import schedule
 import subprocess
 
+OpenNight = datetime.datetime(2018, 02, 23, 23, 15, 0)
 
+def typeforce():
+     p = Popen(['for run in {1..5}; do python ./hashpdf.py; done'], shell=True)  
+     output = p.communicate()[0]
+
+schedule.every().day.at("15:00").do(typeforce) 
 
 options = {
     'page-size': 'Letter',
@@ -28,11 +37,12 @@ with open("blessed.pdf") as f:
   p = Popen(["lpr"], stdin=f, shell=True) 
   output = p.communicate()[0]
 
-time.sleep(45)
+time.sleep(45)    
 
-try:
-	while True:
+while datetime.datetime.now() > OpenNight:
+    schedule.run_pending()
+     time.sleep(1)
+
+else:
 		p = Popen(['python ./hashpdf.py'], shell=True)  
 		output = p.communicate()[0]
-except KeyboardInterrupt:
-  exit
