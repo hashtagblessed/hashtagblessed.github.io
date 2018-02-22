@@ -17,15 +17,17 @@ schedule.every().day.at("15:00").do(typeforce)
 
 
 
-imgkit.from_file('/Users/jormarti2/hashtagblessed.github.io/index.html', 'output.jpg')
+imgkit.from_file('/home/pi/hashtagblessed.github.io/index.html', 'blessed.jpg')
 
-
-time.sleep(0.2)
- 
 from subprocess import Popen
+# os.system('convert' '+' '.join(['/home/pi/hashtagblessed.github.io/py/blank.jpg', '/home/pi/hashtagblessed.github.io/py/blessed.jpg'])+' blessed.pdf')
+q = Popen(['convert /home/pi/hashtagblessed.github.io/py/blank.jpg /home/pi/hashtagblessed.github.io/py/blessed.jpg blessed.pdf'], shell=True) 
+output = q.communicate()[0]
+
+
 with open("blessed.pdf") as f:
   # call the system's lpr command
-  p = Popen(["lpr output.jpg blank.jpg"], stdin=f, shell=True) 
+  p = Popen(["lpr /home/pi/hashtagblessed.github.io/py/blessed.pdf"], stdin=f, shell=True) 
   output = p.communicate()[0]
 
 time.sleep(45)    
