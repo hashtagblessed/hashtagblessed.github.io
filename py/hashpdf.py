@@ -1,6 +1,6 @@
 #!/usr/bin/env python
 import os
-import pdfkit
+import imgkit
 import threading
 import time
 import datetime
@@ -15,26 +15,17 @@ def typeforce():
 
 schedule.every().day.at("15:00").do(typeforce) 
 
-options = {
-    'page-size': 'Letter',
-    'margin-top': '0in',
-    'margin-right': '0in',
-    'margin-bottom': '0in',
-    'margin-left': '0in',
-  	'encoding': 'UTF-8',
-  	'zoom': 1.246,
-
-}
 
 
-pdfkit.from_file('/Users/chrisgivens/hashtagblessed.github.io/index.html', 'blessed.pdf', options=options)
+imgkit.from_file('/Users/jormarti2/hashtagblessed.github.io/index.html', 'output.jpg')
+
 
 time.sleep(0.2)
-
+ 
 from subprocess import Popen
 with open("blessed.pdf") as f:
   # call the system's lpr command
-  p = Popen(["lpr"], stdin=f, shell=True) 
+  p = Popen(["lpr output.jpg blank.jpg"], stdin=f, shell=True) 
   output = p.communicate()[0]
 
 time.sleep(45)    
